@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "distlimit"
+version = "0.1.0"
+description = "Multi-tenant rate limiter with five algorithms, a shared store, local caching, and fail-open/fail-closed policies."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Shourie Amireddy", email = "shourie3009@gmail.com" }]
+requires-python = ">=3.12"
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[tool.setuptools]
+packages = ["distlimit"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-q"
